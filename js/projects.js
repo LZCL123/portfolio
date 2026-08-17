@@ -37,7 +37,7 @@ const PROJECTS = [
   },
   {
     title: "智慧园区物业服务小程序",
-    subtitle: "山西肇新科技有限公司 · Java 开发工程师(实习)",
+    subtitle: "山西肇新科技有限公司 · Java 开发工程师(2026.02 - 2026.07)",
     desc: "面向园区物业管理场景的微信小程序综合服务平台,支撑多园区数据隔离与千人千面展示。",
     emoji: "🏢",
     category: "backend",
