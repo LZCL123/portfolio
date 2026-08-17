@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>连子超 · Java 开发工程师</title>
+  <meta name="description" content="连子超的个人作品集 — Java 开发工程师 / Agent 开发工程师,专注后端工程与 AI 应用开发。" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- 可选:引入 Google Fonts 字体(离线部署时删除下面这行) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>" />
+</head>
+<body>
+
+  <!-- ======================= 顶部导航 ======================= -->
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a href="#top" class="nav-logo">&lt;连子超 /&gt;</a>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">关于我</a></li>
+        <li><a href="#projects" class="nav-link">项目作品</a></li>
+        <li><a href="#skills" class="nav-link">技能</a></li>
+        <li><a href="#contact" class="nav-link">联系我</a></li>
+        <li><a href="resume.pdf" download class="btn btn-primary nav-cta">下载简历</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ======================= Hero 首屏 ======================= -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="hero-greet reveal">你好,我是</p>
+        <h1 class="hero-name reveal">连子超</h1>
+        <p class="hero-title reveal">Java 开发工程师 <span class="accent">·</span> Agent 开发工程师</p>
+        <p class="hero-desc reveal">
+          太原工业学院软件工程本科在读,求职 Java 开发工程师 / Agent 开发工程师。
+          有 Spring Boot + MySQL + Redis 全链路开发经验,同样热衷 Spring AI、RAG、Agent 等 AI 应用方向。
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">查看项目作品</a>
+          <a href="https://github.com/LZCL123" target="_blank" rel="noopener" class="btn btn-ghost">GitHub →</a>
+        </div>
+        <ul class="hero-stats reveal">
+          <li><strong>5</strong><span>项目作品</span></li>
+          <li><strong>1</strong><span>段实习经历</span></li>
+          <li><strong>2</strong><span>项省级竞赛获奖</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= 关于我 ======================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title reveal">关于我</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              你好!我是连子超,太原工业学院软件工程专业本科生,
+              求职方向为 <strong>Java 开发工程师 / Agent 开发工程师</strong>。
+            </p>
+            <p>
+              我具备扎实的 Java 后端功底,熟悉 Spring Boot、MyBatis-Plus、MySQL、Redis 等主流技术;
+              曾在山西肇新科技有限公司实习,独立负责核心业务模块开发,积累了真实的工程实践经验。
+            </p>
+            <p>
+              同时我对 AI 应用开发充满热情,熟悉 Spring AI、RAG 知识库、Prompt 工程与 Agent Skills,
+              并基于 codex + MCP 完成了 AI 热点监控工具的开发。
+            </p>
+            <div class="about-tags">
+              <span class="tag">Java 后端</span>
+              <span class="tag">AI 应用开发</span>
+              <span class="tag">工程实践</span>
+              <span class="tag">快速学习</span>
+            </div>
+          </div>
+          <ul class="about-info reveal">
+            <li><span class="info-label">姓名</span>连子超</li>
+            <li><span class="info-label">职位</span>Java 开发工程师</li>
+            <li><span class="info-label">学历</span>太原工业学院 · 软件工程(本科)</li>
+            <li><span class="info-label">邮箱</span><a href="mailto:lzc.code@gmail.com">lzc.code@gmail.com</a></li>
+            <li><span class="info-label">电话</span>185-3683-6432</li>
+            <li><span class="info-label">状态</span><span class="status-dot"></span> 求职中</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 项目作品 ======================= -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <h2 class="section-title reveal">项目作品</h2>
+        <p class="section-sub reveal">以下是我参与开发的核心项目,数据均来自实际项目复盘。</p>
+
+        <!-- 项目筛选按钮(由 js/main.js 根据项目数据自动生成) -->
+        <div class="filter-bar reveal" id="filterBar"></div>
+
+        <!-- 项目卡片容器(由 js/main.js 渲染) -->
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ======================= 技能 ======================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title reveal">技能清单</h2>
+        <div class="skills-grid">
+
+          <div class="skill-card reveal">
+            <h3 class="skill-cat">Java 后端</h3>
+            <ul class="skill-list">
+              <li><span class="skill-name">Java 8/17 核心(集合、反射、JUC 并发)</span><span class="skill-bar"><i style="width:90%"></i></span></li>
+              <li><span class="skill-name">Spring Boot / Spring MVC</span><span class="skill-bar"><i style="width:90%"></i></span></li>
+              <li><span class="skill-name">MyBatis-Plus / Hutool</span><span class="skill-bar"><i style="width:88%"></i></span></li>
+              <li><span class="skill-name">Spring AOP / 声明式事务 / Bean 生命周期</span><span class="skill-bar"><i style="width:82%"></i></span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3 class="skill-cat">数据库与缓存</h3>
+            <ul class="skill-list">
+              <li><span class="skill-name">MySQL(索引优化、事务、MVCC)</span><span class="skill-bar"><i style="width:88%"></i></span></li>
+              <li><span class="skill-name">SQL 优化 / 慢查询分析 / Druid</span><span class="skill-bar"><i style="width:85%"></i></span></li>
+              <li><span class="skill-name">Redis(分布式锁、多级缓存)</span><span class="skill-bar"><i style="width:82%"></i></span></li>
+              <li><span class="skill-name">Milvus 向量数据库</span><span class="skill-bar"><i style="width:70%"></i></span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3 class="skill-cat">AI 应用开发</h3>
+            <ul class="skill-list">
+              <li><span class="skill-name">Spring AI / RAG 知识库 / 工具调用</span><span class="skill-bar"><i style="width:85%"></i></span></li>
+              <li><span class="skill-name">Prompt 工程优化</span><span class="skill-bar"><i style="width:85%"></i></span></li>
+              <li><span class="skill-name">Agent Skills / MCP / codex 工作流</span><span class="skill-bar"><i style="width:80%"></i></span></li>
+              <li><span class="skill-name">OpenRouter 大模型接入 / 文档 ETL</span><span class="skill-bar"><i style="width:75%"></i></span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3 class="skill-cat">工具与部署</h3>
+            <ul class="skill-list">
+              <li><span class="skill-name">Docker / docker-compose</span><span class="skill-bar"><i style="width:80%"></i></span></li>
+              <li><span class="skill-name">RabbitMQ(死信队列、异步解耦)</span><span class="skill-bar"><i style="width:80%"></i></span></li>
+              <li><span class="skill-name">Nginx(反向代理、HTTPS)</span><span class="skill-bar"><i style="width:78%"></i></span></li>
+              <li><span class="skill-name">Git / Linux / Git Flow</span><span class="skill-bar"><i style="width:85%"></i></span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 联系我 ======================= -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-inner">
+        <h2 class="section-title reveal">联系我</h2>
+        <p class="section-sub reveal">如果你对我的经历感兴趣,或想聊聊 Java / AI 应用开发,欢迎随时联系我。</p>
+        <div class="contact-actions reveal">
+          <a href="mailto:lzc.code@gmail.com" class="btn btn-primary">📧 发送邮件</a>
+          <a href="https://github.com/LZCL123" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+          <a href="resume.pdf" download class="btn btn-ghost">📄 下载简历</a>
+        </div>
+        <p class="contact-note reveal">📱 电话 / 微信:185-3683-6432 · 如需微信二维码或更多作品,请联系我获取</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= 页脚 ======================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 连子超 · 用 ☕ 与代码构建</p>
+      <a href="#top" class="back-top" aria-label="回到顶部">↑</a>
+    </div>
+  </footer>
+
+  <!-- 项目数据:编辑 js/projects.js 即可增删项目 -->
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
