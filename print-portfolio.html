@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>连子超 · 作品集</title>
+<style>
+  @page {
+    size: A4;
+    margin: 16mm 14mm 16mm 14mm;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "SimSun", sans-serif;
+    color: #1f2937;
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+
+  /* ---- 头部 ---- */
+  .head { border-bottom: 3px solid #2563eb; padding-bottom: 10px; margin-bottom: 14px; }
+  .head h1 { font-size: 22pt; letter-spacing: 2px; }
+  .head .role { color: #2563eb; font-size: 12pt; font-weight: bold; margin-top: 2px; }
+  .head .contact { margin-top: 6px; font-size: 9.5pt; color: #4b5563; }
+
+  /* ---- 小节 ---- */
+  .section { margin-bottom: 11px; }
+  .section-title {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #2563eb;
+    border-left: 4px solid #2563eb;
+    padding-left: 8px;
+    margin-bottom: 6px;
+  }
+
+  /* ---- 教育 ---- */
+  .edu-item { display: flex; justify-content: space-between; }
+  .edu-item .school { font-weight: bold; }
+  .edu-item .time { color: #6b7280; font-size: 9.5pt; }
+  .honors { margin-top: 4px; color: #4b5563; font-size: 10pt; }
+  .honors li { list-style: none; margin-bottom: 2px; }
+  .honors li::before { content: "🏆 "; }
+
+  /* ---- 技能 ---- */
+  .skill-group { margin-bottom: 6px; }
+  .skill-group b { color: #374151; }
+  .skill-group span { color: #4b5563; }
+
+  /* ---- 项目 ---- */
+  .proj { margin-bottom: 9px; }
+  .proj-title { font-weight: bold; font-size: 11pt; }
+  .proj-sub { color: #2563eb; font-size: 9pt; margin: 1px 0 2px; }
+  .proj-tech { font-size: 9pt; color: #6b7280; margin-bottom: 3px; }
+  .proj ul { padding-left: 15px; }
+  .proj li { margin-bottom: 1px; font-size: 9.5pt; }
+
+  .footer-note {
+    margin-top: 10px;
+    font-size: 9pt;
+    color: #9ca3af;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 8px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ 第 1 页:个人信息 + 教育 + 技能 ============ -->
+<div class="page">
+  <div class="head">
+    <h1>连子超</h1>
+    <div class="role">Java 开发工程师 · Agent 开发工程师</div>
+    <div class="contact">
+      电话:185-3683-6432 &nbsp;|&nbsp; 微信:lian_zhichao_its &nbsp;|&nbsp; 邮箱:lzc.code@gmail.com &nbsp;|&nbsp; 年龄:21 &nbsp;|&nbsp; 求职状态:随时到岗
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">教育经历</div>
+    <div class="edu-item">
+      <span class="school">太原工业学院 · 软件工程(本科)</span>
+      <span class="time">2022.09 - 2026.06(预计)</span>
+    </div>
+    <ul class="honors">
+      <li>2025 年华北五省计算机应用大赛 · 省级一等奖</li>
+      <li>2025 年计算机设计大赛 · 省级二等奖</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">专业技能</div>
+    <div class="skill-group"><b>Java 后端:</b><span> 掌握 Java 8 核心特性,熟悉集合框架、反射、动态代理、JUC 并发编程等底层机制;熟练使用 Spring Boot、Spring MVC、MyBatis-Plus 开发,深入理解 Spring AOP、声明式事务、Bean 生命周期及三级缓存解决循环依赖等核心原理;熟练使用 Hutool、Lombok 等工具库。</span></div>
+    <div class="skill-group"><b>数据库与缓存:</b><span> 熟悉 MySQL 数据库设计与 SQL 优化,掌握索引优化、慢查询分析方法,理解事务机制、日志原理及 MVCC;熟悉 Redis,实践过缓存穿透/击穿/雪崩解决方案,掌握分布式锁与多级缓存架构,了解哨兵集群与 Redisson 看门狗;了解 Milvus 向量数据库与文档 ETL、向量检索流程。</span></div>
+    <div class="skill-group"><b>AI 应用开发:</b><span> 熟悉 Spring AI(Alibaba) 生态,能基于工具调用与 MCP 协议构建企业级 Agent 应用;掌握 ReAct、Reflexion 推理范式与多步任务编排、失败恢复设计;掌握 RAG 全链路(文档切分、Embedding、Milvus 检索、向量+关键词 RRF 混合检索)与检索评测(hit@5 消融);具备上下文工程能力(分层记忆、Token 成本控制、Prompt 约束与幻觉抑制、SSE 流式与降级熔断)。</span></div>
+    <div class="skill-group"><b>工程与部署:</b><span> 了解 JVM 内存结构、GC 机制与基础调优;熟练使用 Docker 构建镜像与 docker-compose 编排,配置 Nginx 反向代理与 HTTPS;掌握 RabbitMQ 消息队列(死信队列、异步解耦);熟悉 Git / Git Flow 分支管理与 Linux 环境部署。</span></div>
+  </div>
+</div>
+
+<!-- ============ 第 2 页:项目经历 ============ -->
+<div class="page">
+  <div class="section">
+    <div class="section-title">项目经历</div>
+
+    <div class="proj">
+      <div class="proj-title">企业级 AI 知识问答与 Agent 平台(Spring AI + RAG + MCP)</div>
+      <div class="proj-sub">个人独立项目 · Agent 方向旗舰项目(「知识助手 + 任务 Agent」双运行时)</div>
+      <div class="proj-tech">技术栈:Spring AI(Alibaba) / RAG / Milvus / MCP / ReAct / SSE·WebSocket / Spring Boot 3 / Vue 3 / Docker Compose</div>
+      <ul>
+        <li>双运行时 Agent 架构:知识助手(RAG 问答,答案强制带 [来源N] 依据)与任务 Agent(多步工具执行),复用 Spring AI 工具调用与 MCP 能力,并补齐框架未覆盖的失败重试、规则降级与意图隔离,避免历史任务上下文污染导致旧任务误重跑;</li>
+        <li>上下文工程:设计「最近 16 条原文 + 会话滚动摘要」分层记忆替代裸窗口,水位增量折叠、幂等续跑、失败冷却、问答前同步补齐,长会话与重开会话仍可准确指代早期内容,上下文 token 成本下降约 30%;</li>
+        <li>RAG 检索优化:结构感知切分(约 400 tokens/块)+ text-embedding-v2(1536 维)写入 Milvus,落地「向量 topK=20 + 阈值 0.3 + 关键词通道 RRF 融合 → topK=5」混合检索与查询改写;自建 30 题评测集做检索消融,hit@5 达 96.7%,并据此定位并修复关键词通道触发条件缺陷;</li>
+        <li>工具与 MCP 生态:工具白名单编排知识库检索、网页抓取、文件读写、资源下载与 PDF 生成(内置中文字体),高危终端能力默认熔断;基于 Spring AI MCP Client 接入外部 MCP Server,并把检索能力封装为可独立部署的 MCP 服务;</li>
+        <li>工程化与成本:采集器策略模式支撑多源聚合与定时采集,结构化输出(JSON Schema)校验评分,Redis 内容哈希缓存使重复条目 AI 调用降为 0;SSE 流式 + WebSocket 实时推送,条件装配支持无 Milvus 降级启动,Docker Compose 一键部署。</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">浮窗衣镜 — AI 悬浮虚拟试衣平台(参赛项目)</div>
+      <div class="proj-sub">🏆 2025 华北五省计算机应用大赛 省级一等奖 · 2025 计算机设计大赛 省级二等奖(团队项目,本人负责后端开发、小程序前端、架构设计与统筹答辩)</div>
+      <div class="proj-tech">技术栈:Spring Boot / MyBatis-Plus / JWT / MinIO / 阿里云OSS·短信 / uni-app / Leffa 虚拟试衣模型</div>
+      <ul>
+        <li>搭建 Spring Boot 多模块后端(clothes-common / model / web),实现注册登录(短信验证码)、JWT 鉴权与用户信息管理,基于 knife4j 自动生成 API 文档;</li>
+        <li>开发 uni-app 小程序前端:AI 对话、相机拍照试衣、悬浮窗原生插件、地图定位与个人中心模块;对接 Leffa 虚拟试衣与衣服推荐模型,打通「拍照上传 → AI 换装 → 智能推荐」全流程;</li>
+        <li>负责项目整体架构设计、进度统筹与答辩,作品获省级一等奖。</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">智慧园区物业服务小程序</div>
+      <div class="proj-sub">山西肇新科技有限公司 · Java 开发工程师(2026.02.18 - 2026.07.01)</div>
+      <div class="proj-tech">技术栈:Java 8 / Spring Boot / MyBatis-Plus / MySQL / Redis / RabbitMQ / Docker / Nginx / WxJava</div>
+      <ul>
+        <li>基于 Spring Boot 搭建后端分层架构,封装统一响应体 Result&lt;T&gt;、全局异常处理器、参数校验、JWT 接口鉴权与 AOP 操作日志切面,降低重复代码量约 40%;</li>
+        <li>负责园区信息、服务团队、企业产品、政策资讯、空闲房源等核心模块开发,设计多园区数据隔离方案,结合联合索引优化与分页改造,核心列表接口响应时间从约 300ms 优化至约 120ms;</li>
+        <li>引入 Redis 实现 JWT Token 缓存与登录会话管理,设计带时效的房源分享 Token 支持微信分享裂变;对高频数据采用 Cache-Aside + 逻辑过期 + 互斥锁保障缓存一致性;对接微信授权登录与多角色权限校验,关键写接口采用幂等 Token 防重复提交;</li>
+        <li>基于 RabbitMQ 实现账单生成后的异步通知与解耦,账单接口耗时降低约 60%,通过消息确认与死信队列保障可靠投递;使用 Docker 部署应用与依赖服务,配置 Nginx 反向代理、HTTPS 与静态资源缓存,基于 Git Flow 管理版本发布。</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">AI 热点监控工具(AI 应用开发项目)</div>
+      <div class="proj-sub">个人项目 · GitHub 开源:github.com/LZCL123/ai-hotspot-monitor</div>
+      <div class="proj-tech">技术栈:Spring Boot / Vue 3 / OpenRouter / WebSocket(STOMP) / jsoup / Redis / MyBatis-Plus / Agent Skills / MCP</div>
+      <ul>
+        <li>基于 Collector 策略模式实现 Bing、HackerNews 等多数据源采集(jsoup + Hutool HTTP),架构支持低成本扩展数据源;通过 OpenRouter 接入大模型,设计结构化分析 Prompt 完成真实性验证、相关性评分、重要性分级与摘要,AI 过滤准确率达 90% 以上,未配置 API Key 时自动降级本地规则;</li>
+        <li>利用大模型做查询扩展(5~15 个语义变体)提升召回,并用 Redis 缓存避免重复调用降低 AI 成本;基于 WebSocket/STOMP 实现事件驱动订阅,新热点毫秒级实时推送;</li>
+        <li>将热点监控能力封装为标准化的 Agent Skills 包(agent-skill/SKILL.md),可在 Cursor、codex 等主流 AI 编程工具中开箱复用,无需后端服务。</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">NEON FLUX — Three.js + MediaPipe 手势识别 3D 粒子交互页</div>
+      <div class="proj-sub">创意编码项目 · GitHub 开源:github.com/LZCL123/neon-flux</div>
+      <div class="proj-tech">技术栈:Three.js / MediaPipe Hands / WebGL / JavaScript / Node.js</div>
+      <ul>
+        <li>22,000 粒子 GPU 加速实时渲染;接入 MediaPipe Hands 手势追踪,手部化作粒子吸引场驱动画面,支持桌面与移动端;</li>
+        <li>10+ 视觉变体(霓虹流体、粒子球、丝带、流场等),零依赖 CDN 加载,静态服务器即可运行。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-note">作品集网站:https://lzcl123.github.io/portfolio · 源码见 GitHub:https://github.com/LZCL123(企业级 AI 知识问答与 Agent 平台源码可私信获取 · 浮窗衣镜 · AI 热点监控工具 · 校帮达 · NEON FLUX)</div>
+</div>
+
+</body>
+</html>
