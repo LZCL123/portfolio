@@ -20,6 +20,23 @@
 
 const PROJECTS = [
   {
+    title: "企业级 AI 知识问答与 Agent 平台",
+    subtitle: "个人独立项目 · Spring AI + RAG + MCP(Agent 方向旗舰项目)",
+    desc: "面向企业「知识查不到、多步任务靠人工」的痛点,基于 Spring AI 生态构建「知识助手 + 任务 Agent」双运行时平台,覆盖 RAG 问答、工具编排、长程记忆与多源信息聚合。",
+    emoji: "🧠",
+    category: "fullstack",
+    highlights: [
+      "双运行时 Agent 架构:知识助手(RAG 问答,答案强制带 [来源N] 依据)+ 任务 Agent(多步工具执行),复用 Spring AI 工具调用与 MCP 能力,并补齐框架未覆盖的失败重试、规则降级与意图隔离(解决旧任务被误重跑)",
+      "上下文工程:设计「最近 16 条原文 + 会话滚动摘要」分层记忆替代裸窗口 —— 水位增量折叠、幂等续跑、失败冷却、问答前同步补齐,解决长会话与重开会话的上下文丢失,上下文 token 成本下降约 30%",
+      "RAG 检索优化:结构感知切分(约 400 tokens/块)+ text-embedding-v2(1536 维)写入 Milvus;落地「向量 topK=20 + 阈值 0.3 + 关键词通道 RRF 融合 → topK=5」混合检索与查询改写;自建 30 题评测集做检索消融,hit@5 达 96.7%,并据此定位并修复关键词通道触发条件缺陷",
+      "工具与 MCP 生态:工具白名单编排知识库检索、网页抓取、文件读写、资源下载与 PDF 生成(内置中文字体),高危终端能力默认熔断;基于 Spring AI MCP Client 接入外部 MCP Server,并把检索能力封装为可独立部署的 MCP 服务",
+      "工程化与成本:采集器策略模式支撑多源聚合与定时采集,结构化输出(JSON Schema)完成真实性校验与评分,Redis 内容哈希缓存使重复条目 AI 调用降为 0;SSE 流式 + WebSocket 实时推送,条件装配支持无 Milvus 降级启动,Docker Compose 一键部署",
+    ],
+    tags: ["Spring AI", "RAG", "Milvus", "MCP", "ReAct", "SSE/WebSocket", "Spring Boot 3", "Vue 3", "Docker"],
+    github: "",
+    demo: "",
+  },
+  {
     title: "浮窗衣镜 — AI 虚拟试衣平台",
     subtitle: "🏆 2025 华北五省计算机应用大赛省级一等奖 · 参赛作品",
     desc: "AI 悬浮虚拟试衣平台:拍照上传 → AI 换装试衣 → 智能推荐。微信小程序 + Spring Boot 后端 + AI 模型,前后端均已开源。",

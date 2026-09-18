@@ -4,6 +4,7 @@
 
 ## 项目
 
+- 企业级 AI 知识问答与 Agent 平台 — Spring AI + RAG + MCP 双运行时 Agent 平台(知识助手 + 任务 Agent、分层记忆、混合检索与离线评测;个人独立项目,源码可私信获取)
 - [浮窗衣镜](https://github.com/LZCL123/clothes) — AI 虚拟试衣平台(华北五省计算机应用大赛省级一等奖参赛作品,前后端均已开源)
 - [AI 热点监控工具](https://github.com/LZCL123/ai-hotspot-monitor) — 多数据源采集 + AI 分析 + WebSocket 实时推送
 - [校帮达](https://github.com/LZCL123/xiaoyuandai) — 校园互助服务小程序(Spring Boot 多模块 + uni-app)
@@ -11,7 +12,7 @@
 
 ## 技术栈
 
-Java / Spring Boot / MyBatis-Plus / MySQL / Redis / RabbitMQ / Docker / Vue / uni-app / Python
+Java / Spring Boot / Spring AI / RAG / Milvus / MCP / MyBatis-Plus / MySQL / Redis / RabbitMQ / Docker / Vue / uni-app / Python
 
 ## 简历
 
